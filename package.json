@@ -1,0 +1,56 @@
+{
+  "name": "@sho-js/react-cpa",
+  "version": "4.0.0",
+  "description": "React CPA Integration",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack",
+    "lint": "./node_modules/.bin/tslint --project .",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wearesho-team/react-cpa.git"
+  },
+  "keywords": [
+    "bobra",
+    "react",
+    "wearesho",
+    "cpa"
+  ],
+  "author": "Alexander <horat1us>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wearesho-team/react-cpa/issues"
+  },
+  "homepage": "https://github.com/wearesho-team/react-cpa#readme",
+  "devDependencies": {
+    "@sho-js/cpa": "^4.0.0",
+    "@types/node": "^8.10.39",
+    "@types/react": "^16.7.22",
+    "awesome-typescript-loader": "^3.2.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "react": "^16.8.0",
+    "source-map-loader": "^0.2.1",
+    "ts-node": "^3.3.0",
+    "tslint": "5.6.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^3.2.4",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0",
+    "webpack-plugin-critical": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@sho-js/cpa": "^4.0.0",
+    "react": "^16.8.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
