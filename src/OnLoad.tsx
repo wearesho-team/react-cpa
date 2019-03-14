@@ -6,14 +6,10 @@ export interface OnLoadProps {
 }
 
 export const OnLoad: React.FunctionComponent<OnLoadProps> = React.memo((props) => {
-    const service = React.useMemo(
-        () => props.service || new Cpa.Service(`.${location.host}`),
-        [ props.service, ]
-    );
-
     React.useEffect(() => {
+        const service = props.service || new Cpa.Service(`.${location.host}`);
         (service).onLoad(new URLSearchParams(location.search));
-    }, [ service, ]);
+    }, [ props.service, ]);
 
     return null;
 });
